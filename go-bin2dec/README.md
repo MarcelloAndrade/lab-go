@@ -6,11 +6,8 @@ O Bin2Dec permite que o usuário insira strings de até 8 dígitos binários, 0'
 
 ## User Stories
  - [x] O usuário pode inserir até 8 dígitos binários em um campo de entrada
- - [ ] O usuário deve ser notificado se algo diferente de 0 ou 1 foi inserido
- - [ ] O usuário visualiza os resultados em um único campo de saída contendo o equivalente decimal (base 10) do número binário que foi inserido
-
-## Bônus features
- - [ ] O usuário pode inserir um número variável de dígitos binários
+ - [x] O usuário deve ser notificado se algo diferente de 0 ou 1 foi inserido
+ - [x] O usuário visualiza os resultados em um único campo de saída contendo o equivalente decimal (base 10) do número binário que foi inserido
 
 ## Links e recursos úteis
 [Binary number system](https://en.wikipedia.org/wiki/Binary_number)
