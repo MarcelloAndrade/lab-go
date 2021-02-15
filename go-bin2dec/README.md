@@ -14,3 +14,6 @@ O Bin2Dec permite que o usuário insira strings de até 8 dígitos binários, 0'
 
 ## Referência 
 [app-ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)
+
+## Go Commands
+go test main.go main_test.go -v

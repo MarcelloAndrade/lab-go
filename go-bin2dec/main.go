@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"math"
 	"regexp"
@@ -14,23 +15,23 @@ func main() {
 	fmt.Println("Input Binário:")
 	fmt.Scanln(&input)
 
-	if isValid(input) {
-		fmt.Printf("Binário: %v Decimal: %v", input, binaryToDecimal(input))
+	decimal, err := binaryToDecimal(input)
+	if err != nil {
+		fmt.Println(err)
 	} else {
-		fmt.Printf("Input inválido.")
+		fmt.Println("Binário: ", input, " Decimal: ", decimal)
 	}
 }
 
-func isValid(input string) bool {
+func binaryToDecimal(input string) (float64, error) {
+	// isValid ?
 	matched, _ := regexp.MatchString("^[0-1]+$", input)
-	if matched && (len(input) <= 8) {
-		return true
+	if !matched || (len(input) > 8) {
+		return 0, errors.New("Input inválido")
 	}
-	return false
-}
 
-func binaryToDecimal(input string) float64 {
-	decimal := 0.0
+	// convert
+	var decimal float64
 	s := strings.Split(input, "")
 	for i := 0; i < len(s); i++ {
 		base, _ := strconv.ParseFloat(s[i], 64)
@@ -39,5 +40,5 @@ func binaryToDecimal(input string) float64 {
 		decimal += base * p
 		//fmt.Println("Base", base, "Binary: ", 2, "Exponential: ", exponential, "Pow: ", p, "Result: ", base*p)
 	}
-	return decimal
+	return decimal, nil
 }
