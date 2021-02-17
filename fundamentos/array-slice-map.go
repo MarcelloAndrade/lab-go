@@ -18,15 +18,15 @@ func main() {
 
 	// ----------- ----------- ----------- //
 	fmt.Println("## For range")
-	numeros := [...]int{1, 2, 3, 4, 5} // compilador conta o tamanho do array
+	numeros := [...]int{1, 2, 3, 4, 5} // ... compilador conta o tamanho do array
 	for i, numero := range numeros {
 		fmt.Printf("%d) %d \n", i, numero)
 	}
 
 	// ----------- ----------- ----------- //
 	fmt.Println("## Slice")
-	a1 := [3]int{1, 2, 3} // array
-	s1 := []int{1, 2, 3}  // slice
+	a1 := [3]int{1, 2, 3} // array - quando definimos o tamanho
+	s1 := []int{1, 2, 3}  // slice - quando não definimos o tamanho
 	fmt.Println(a1, s1)
 	fmt.Println("Array", reflect.TypeOf(a1), "- Slice", reflect.TypeOf(s1))
 
