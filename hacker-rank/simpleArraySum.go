@@ -5,8 +5,8 @@ import (
 )
 
 /*
- * Complete the simpleArraySum function below.
- */
+	Print the sum of the array's elements as a single integer
+*/
 func simpleArraySum(ar []int32) int32 {
 	var sum int32
 	for _, n := range ar {
